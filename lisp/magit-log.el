@@ -1108,7 +1108,7 @@ If there is no revision buffer in the same frame, then do nothing."
            (setq magit--update-revision-buffer nil)
            (when (buffer-live-p buf)
              (let ((magit-display-buffer-noselect t))
-               (apply #'magit-show-commit rev (magit-diff-arguments)))))
+               (apply #'magit-show-commit rev (magit-show-commit--arguments)))))
          (setq magit--update-revision-buffer nil))))))
 
 (defvar magit--update-blob-buffer nil)
